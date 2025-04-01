@@ -13,8 +13,8 @@ namespace Xml_app_libary
         public double Price { get; set; }
         public double PriceDPH { get; set; }
 
-        public string FormatedPrice => Price.ToString( new CultureInfo("de-DE"));
-        public string FormatedPriceDPH => PriceDPH.ToString(new CultureInfo("de-DE"));
+        public string FormatedPrice => Price.ToString("N0", new CultureInfo("de-DE"));
+        public string FormatedPriceDPH => PriceDPH.ToString("N0", new CultureInfo("de-DE"));
 
         public static List<CarData> AllCarData(List<Car> cars)
         {
